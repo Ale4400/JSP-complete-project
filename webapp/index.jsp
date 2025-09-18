@@ -1,0 +1,153 @@
+<%-- 
+    Document   : index
+    Created on : 15/09/2025, 11:59:34 p. m.
+    Author     : alexj
+--%>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moody</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #fff6fc;
+      color: #2b2b2b;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background-color: white;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    .logo img {
+      width: 30px;
+      margin-right: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: white;
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    .btn-register {
+      background-color: #f4caff;
+      border: none;
+      color: #fff;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 80px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .hero-text .buttons {
+      margin-top: 20px;
+    }
+
+    .hero-img img {
+      width: 350px;
+      max-width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .hero-img {
+        margin-top: 30px;
+      }
+    }
+  </style>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="https://cdn-icons-png.flaticon.com/512/168/168882.png" alt="logo" />
+      Moody
+    </div>
+    <nav>
+      <a href="index.jsp">Home</a>
+      <a href="#">Resources</a>
+      <a href="#">Terapy</a>
+      <a href="#">My account</a>
+    </nav>
+    <div class="buttons">
+      <button class="btn" onclick="location.href='login.jsp'">Sign in</button>
+      <button class="btn btn-register" onclick="location.href='registro.jsp'">Register</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Crece y sana con nosotros</h1>
+      <p>
+        Tu espacio seguro para cuidar de tu salud mental. En Moody, te ayudamos a entender y gestionar tus emociones con herramientas simples, seguimiento diario del estado de ánimo y recursos pensados para tu bienestar. Estás dando un paso importante hacia una vida más equilibrada.
+      </p>
+      <div class="buttons">
+        <button class="btn" onclick="location.href='login.jsp'">Sign in</button>
+        <button class="btn btn-register" onclick="location.href='registro.jsp'">Register</button>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="${pageContext.request.contextPath}/assets/images/flowerindex.png" alt="flower" />
+    </div>
+  </section>
+</body>
+</html>
